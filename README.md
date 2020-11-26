@@ -8,12 +8,12 @@ services.AddNacosCore(Configuration);
 
 appSetting.Json 文件配置如下：
 
-```json
+
 "NacosConfig": {
   "Ip": "localhost", //注册到Nacos的IP 
   "Port": 51711,//注册到Nacos的端口 
   "ServiceName": "Test", //注册到Nacos的服务名
-  "Metadata": { "Name": "cxd", "Age": 18 }, //注册到Nacos的元数据 
+  "Metadata": { "Name": "cxd", "Age": 18 }, //注册到Nacos的元数据,格式必须为Json字符串
   "Enabled": true, //服务是否上线 
   "Healthy": true, //服务是否健康 
   "RegisterUrl": "http://127.0.0.1:8848", //Nacos服务注册地址 
