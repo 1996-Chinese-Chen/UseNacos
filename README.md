@@ -8,7 +8,7 @@ services.AddNacosCore(Configuration);
 
 appSetting.Json 文件配置如下：
 
-
+```json
 "NacosConfig": {
   "Ip": "localhost", //注册到Nacos的IP 
   "Port": 51711,//注册到Nacos的端口 
