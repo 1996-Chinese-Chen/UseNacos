@@ -9,6 +9,7 @@ services.AddNacosCore(Configuration);
 appSetting.Json 文件配置如下：
 
 ```json
+{  
 "NacosConfig": {
   "Ip": "localhost", //注册到Nacos的IP 
   "Port": 51711,//注册到Nacos的端口 
@@ -25,6 +26,8 @@ appSetting.Json 文件配置如下：
   "NameSpaceId": "", //命名空间ID 
   "LoadBalance": "RoundLoadBalance" //默认RoundLoadBalance为轮询算法，值为特性的值 
 }
+}
+
 ```
 
 动态配置类：
