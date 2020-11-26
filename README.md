@@ -1,29 +1,29 @@
 ＃使用Nacos
 注册服务到阿里巴巴的Nacos服务中心
-在ConfigureServices配置使用
-  services.AddNacosCore(Configuration);
-  appSetting.Json文件配置如下：
-  "NacosConfig": {
-    "Ip": "localhost", //注册到Nacos的IP
-    "Port": 51711,//注册到Nacos的端口
-    "ServiceName": "Test", //注册到Nacos的服务名
-    "Metadata": {
-      "Name": "cxd",
-      "Age": 18
-    },  //注册到Nacos的元数据
-    "Enabled": true, //服务是否上线
-    "Healthy": true, //服务是否健康
-    "RegisterUrl": "http://127.0.0.1:8848", //Nacos服务注册地址
-    "EnableSSL": false, //是否启动SSL,启用调用服务获取数据时使用的是HTTPS
-    "GroupName": "", //注册到Nacos的分组名
+ 在ConfigureServices配置使用
+   services.AddNacosCore(Configuration);
+   appSetting.Json文件配置如下：
+   "NacosConfig": {
+     "Ip": "localhost", //注册到Nacos的IP
+     "Port": 51711,//注册到Nacos的端口
+     "ServiceName": "Test", //注册到Nacos的服务名
+     "Metadata": {
+       "Name": "cxd",
+       "Age": 18
+     },  //注册到Nacos的元数据
+     "Enabled": true, //服务是否上线
+     "Healthy": true, //服务是否健康
+     "RegisterUrl": "http://127.0.0.1:8848", //Nacos服务注册地址
+     "EnableSSL": false, //是否启动SSL,启用调用服务获取数据时使用的是HTTPS
+     "GroupName": "", //注册到Nacos的分组名
     "Weight": 0, //权重
     "ClusterName": "",  //集群名称
     "Ephemeral": false,  // 是否临时实例
     "NameSpaceId": "", //命名空间ID
     "LoadBalance": "RoundLoadBalance" //默认RoundLoadBalance为轮询算法，值为特性的值
   }
-动态配置类：继承BaseModel
-使用NacosValueAttribute特性，标记配置类的DataId以及Telent租户信息
+动态配置类：继承BaseModel 
+使用NacosValueAttribute特性，标记配置类的DataId以及Telent租户信息 
  public HelloController(INacosService nacos,IHttpClient http,IOptionsSnapshot<NacosConfig> nacosConfig,Config config)
         {
             Nacos = nacos;
