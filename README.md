@@ -46,6 +46,6 @@ public HelloController (
 } 
 ```
 
-使用配置如上，Config 继承 BaseModel [NacosValue("Config")]DataId为Config NacosConfig为appSetting.Json文件配置 INacosService为服务注册接口，包含配置获取，服务注册，注销，修改，删除，实例注册，修改，发送心跳等，IHttpClient为封装好的HTTP接口，内置负载均衡，默认为轮询， 自定义负载均衡，继承BaseLoadBalance实现GetUrl方法即可，返回Host类型，包含服务IP等信息，其中必须使用NacosLoadBalance特性传入自定义负载均衡标识，建议使用自定义负载均衡类名 需要注意的是，自定义负载均衡构造方法所需函数必须在services.AddNacosCore(Configuration);方法之前注入到容器内部，否则会报错。
+使用配置如上，Config 继承 BaseModel [NacosValue("Config")]DataId为Config NacosConfig为appSetting.Json文件配置 INacosService为服务注册接口，包含配置获取，服务注册，注销，修改，删除，实例注册，修改，发送心跳等，IHttpClient为封装好的HTTP接口，内置负载均衡，默认为轮询， 自定义负载均衡，继承BaseLoadBalance实现GetUrl方法即可，返回Host类型，包含服务IP等信息，其中必须使用NacosLoadBalance特性传入自定义负载均衡标识，建议使用自定义负载均衡类名 需要注意的是，自定义负载均衡构造方法所需参数必须在services.AddNacosCore(Configuration);方法之前注入到容器内部，否则会报错
 
  QQ934550201
