@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace UseNacos
 {
-   public static class ExtendClass
+    public static class ExtendClass
     {
         /// <summary>
         /// 字符串转实体对象
@@ -34,9 +34,10 @@ namespace UseNacos
         /// <param name="str"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static object ToJson(this string str,Type type)
+        public static object ToJson(this string str, Type type)
         {
-            try {
+            try
+            {
                 return JsonConvert.DeserializeObject(str, type);
             }
             catch (Exception ex)
@@ -55,6 +56,7 @@ namespace UseNacos
         {
             try
             {
+                if (nacos == null) return null;
                 Dictionary<string, string> dicParameter = new Dictionary<string, string>();
                 foreach (var propertes in nacos.GetType().GetProperties())
                 {
@@ -77,13 +79,14 @@ namespace UseNacos
                 return null;
             }
         }
-        public static HttpClient GetHttpClient(IHttpClientFactory httpClientFactory,String Name,Hosts hosts,bool bIsEnableSSL)
+        public static HttpClient GetHttpClient(IHttpClientFactory httpClientFactory, String Name, Hosts hosts, bool bIsEnableSSL)
         {
             try
             {
                 if (hosts == null)
                 {
-                    Console.WriteLine(MethodInfo.GetCurrentMethod().Name + ":Host不能为空，无法负载均衡" );
+                    Console.WriteLine(MethodInfo.GetCurrentMethod().Name + ":Host不能为空，无法负载均衡");
+                    throw new NullReferenceException("Service Is Null,Can't Use LoadBalances");
                 }
                 var client = httpClientFactory.CreateClient(Name);
                 if (bIsEnableSSL)
@@ -112,6 +115,7 @@ namespace UseNacos
         {
             try
             {
+                if (nacos == null) return null;
                 StringContent form = new StringContent(JsonConvert.SerializeObject(nacos));
                 return form;
             }
@@ -131,6 +135,10 @@ namespace UseNacos
         {
             try
             {
+                if (content == null)
+                {
+                    return sUrl;
+                }
                 return sUrl + "?" + content.ReadAsStringAsync().Result;
             }
             catch (Exception ex)

@@ -13,7 +13,6 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("UseNacos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("注册单体服务到阿里巴巴的nacos工具")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("UseNacos")]

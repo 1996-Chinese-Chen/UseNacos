@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wVrk8iA2FfskoXJQqjSYn9ropbmFhAhQxEL6vHJWpShHtgySWB4DIw0aHqMQa87laisSthIEYruKdFBWMFoHtw==",
+  "dgSpecHash": "hHKWwKltr3TtPESUkj8LeJmGudd+QaK76bxpTvG6g/mFxVEX1DBvw8JVMKlFMiZ7M+2NX3m48u3OQAi0F+NCKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\source\\repos\\UseNacos\\UseNacos.csproj",
+  "projectFilePath": "C:\\Users\\admin\\source\\repos\\UseNacos.git\\trunk\\UseNacos\\UseNacos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\source\\repos\\UseNacos\\UseNacos.csproj": {}
+    "C:\\Users\\admin\\source\\repos\\UseNacos.git\\trunk\\UseNacos\\UseNacos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\source\\repos\\UseNacos\\UseNacos.csproj": {
+    "C:\\Users\\admin\\source\\repos\\UseNacos.git\\trunk\\UseNacos\\UseNacos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\UseNacos\\UseNacos.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\UseNacos.git\\trunk\\UseNacos\\UseNacos.csproj",
         "projectName": "UseNacos",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\UseNacos\\UseNacos.csproj",
+        "projectPath": "C:\\Users\\admin\\source\\repos\\UseNacos.git\\trunk\\UseNacos\\UseNacos.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\UseNacos\\obj\\",
+        "outputPath": "C:\\Users\\admin\\source\\repos\\UseNacos.git\\trunk\\UseNacos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
