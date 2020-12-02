@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>注册单体服务到阿里巴巴的nacos工具</Description>
+    <RepositoryUrl>https://github.com/1996-Chinese-Chen/UseNacos.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/1996-Chinese-Chen/UseNacos.git</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <Authors>1996-Chinese-Chen</Authors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +17,8 @@
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.0" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Json" Version="4.7.1" />
+    <PackageReference Include="System.Text.Json" Version="4.7.1" />
   </ItemGroup>
 
 </Project>

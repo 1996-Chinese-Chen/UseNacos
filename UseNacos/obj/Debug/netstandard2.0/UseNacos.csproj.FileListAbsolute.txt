@@ -1,8 +1,8 @@
 C:\Users\admin\source\repos\UseNacos\bin\Debug\netstandard2.0\UseNacos.deps.json
 C:\Users\admin\source\repos\UseNacos\bin\Debug\netstandard2.0\UseNacos.dll
+C:\Users\admin\source\repos\UseNacos\bin\Debug\netstandard2.0\UseNacos.pdb
 C:\Users\admin\source\repos\UseNacos\obj\Debug\netstandard2.0\UseNacos.AssemblyInfoInputs.cache
 C:\Users\admin\source\repos\UseNacos\obj\Debug\netstandard2.0\UseNacos.AssemblyInfo.cs
-C:\Users\admin\source\repos\UseNacos\bin\Debug\netstandard2.0\UseNacos.pdb
+C:\Users\admin\source\repos\UseNacos\obj\Debug\netstandard2.0\UseNacos.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\UseNacos\obj\Debug\netstandard2.0\UseNacos.dll
 C:\Users\admin\source\repos\UseNacos\obj\Debug\netstandard2.0\UseNacos.pdb
-C:\Users\admin\source\repos\UseNacos\obj\Debug\netstandard2.0\UseNacos.csproj.CoreCompileInputs.cache

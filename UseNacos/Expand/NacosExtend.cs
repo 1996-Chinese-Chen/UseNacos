@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Primitives;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json;
 
 namespace UseNacos
 {
@@ -46,7 +46,7 @@ namespace UseNacos
             {
                 dvMetadata.Add(iChildren.Key, iChildren.Value);
             }
-            var metaData = JsonConvert.SerializeObject(dvMetadata);
+            var metaData = JsonSerializer.Serialize(dvMetadata);
             nacosService.Registerinstance(new Registerinstance
             {
                 ServiceName = nacos.ServiceName,

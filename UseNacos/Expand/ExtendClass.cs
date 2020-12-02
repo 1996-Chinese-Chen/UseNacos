@@ -1,14 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using System.Text.Json;
 
 namespace UseNacos
 {
-    public static class ExtendClass
+   public static class ExtendClass
     {
         /// <summary>
         /// 字符串转实体对象
@@ -20,7 +21,7 @@ namespace UseNacos
         {
             try
             {
-                return JsonConvert.DeserializeObject<T>(str);
+                return JsonSerializer.Deserialize<T>(str);
             }
             catch (Exception ex)
             {
@@ -34,11 +35,10 @@ namespace UseNacos
         /// <param name="str"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        public static object ToJson(this string str, Type type)
+        public static object ToJson(this string str,Type type)
         {
-            try
-            {
-                return JsonConvert.DeserializeObject(str, type);
+            try {
+                return JsonSerializer.Deserialize(str, type);
             }
             catch (Exception ex)
             {
@@ -79,7 +79,7 @@ namespace UseNacos
                 return null;
             }
         }
-        public static HttpClient GetHttpClient(IHttpClientFactory httpClientFactory, String Name, Hosts hosts, bool bIsEnableSSL)
+        public static HttpClient GetHttpClient(IHttpClientFactory httpClientFactory,String Name,Hosts hosts,bool bIsEnableSSL)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace UseNacos
             try
             {
                 if (nacos == null) return null;
-                StringContent form = new StringContent(JsonConvert.SerializeObject(nacos));
+                StringContent form = new StringContent(JsonSerializer.Serialize<T>(nacos));
                 return form;
             }
             catch (Exception ex)
@@ -138,7 +138,7 @@ namespace UseNacos
                 if (content == null)
                 {
                     return sUrl;
-                }
+                }    
                 return sUrl + "?" + content.ReadAsStringAsync().Result;
             }
             catch (Exception ex)

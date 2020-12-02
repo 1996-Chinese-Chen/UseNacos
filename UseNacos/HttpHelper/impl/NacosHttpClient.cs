@@ -1,16 +1,13 @@
 ﻿using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace UseNacos
 {
-  public  class NacosHttpClient:IHttpClient
+    public  class NacosHttpClient:IHttpClient
     {
         public NacosHttpClient(IHttpClientFactory clientFactory,BaseLoadBalance baseLoadBalance, IOptionsSnapshot<NacosConfig> nacosConfig)
         {
